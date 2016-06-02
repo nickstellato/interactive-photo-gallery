@@ -1,74 +1,75 @@
-var data =
-    "photos":    {
+{
+    "photos": 
+        {
         "name": "Hay Bales",
-        "image-url":  "/img/photos/01.jpg",
-        "thumbnail-url":  "/img/thumbnails/01.jpg",
-        "caption": "I love hay bales. Took this snap on a drive through the countryside past some straw fields."
-        }
+        "imageURL":  "/img/photos/01.jpg",
+        "thumbnailURL":  "/img/thumbnails/01.jpg",
+        "caption": "I love hay bales. Took this snap on a drive through the countryside past some straw fields.",
         {
         "name": "Lake",
-        "image-url":  "/img/photos/02.jpg",
-        "thumbnail-url":  "/img/thumbnails/02.jpg",
+        "imageURL":  "/img/photos/02.jpg",
+        "thumbnailURL":  "/img/thumbnails/02.jpg",
         "caption": "The lake was so calm today. We had a great view of the snow on the mountains from here."
-        }
+        },
         {
         "name": "Canyon",
-        "image-url":  "/img/photos/03.jpg",
-        "thumbnail-url":  "/img/thumbnails/03.jpg",
+        "imageURL":  "/img/photos/03.jpg",
+        "thumbnailURL":  "/img/thumbnails/03.jpg",
         "caption":  "I hiked to the top of the mountain and got this picture of the canyon and trees below."
-        }
+        },
         {
         "name": "Iceberg",
-        "image-url":  "/img/photos/04.jpg",
-        "thumbnail-url":  "/img/thumbnails/04.jpg",
+        "imageURL":  "/img/photos/04.jpg",
+        "thumbnailURL":  "/img/thumbnails/04.jpg",
         "caption": "It was amazing to see an iceberg up close, it was so cold but didn’t snow today."
-        }
+        },
         {
         "name": "Desert",
-        "image-url":  "/img/photos/05.jpg",
-        "thumbnail-url":  "/img/thumbnails/05.jpg",
+        "imageURL":  "/img/photos/05.jpg",
+        "thumbnailURL":  "/img/thumbnails/05.jpg",
         "caption": "The red cliffs were beautiful. It was really hot in the desert but we did a lot of walking through the canyons."
-        }
+        },
         {
         "name": "Fall",
-        "image-url":  "/img/photos/06.jpg",
-        "thumbnail-url":  "/img/thumbnails/06.jpg",
+        "imageURL":  "/img/photos/06.jpg",
+        "thumbnailURL":  "/img/thumbnails/06.jpg",
         "caption": "Fall is coming, I love when the leaves on the trees start to change color."
-        }
+        },
         {
         "name": "Plantation",
-        "image-url":  "/img/photos/07.jpg",
-        "thumbnail-url":  "/img/thumbnails/07.jpg",
+        "imageURL":  "/img/photos/07.jpg",
+        "thumbnailURL":  "/img/thumbnails/07.jpg",
         "caption": "I drove past this plantation yesterday, everything is so green!"
-        }
+        },
         {
         "name": "Dunes",
-        "image-url":  "/img/photos/08.jpg",
-        "thumbnail-url":  "/img/thumbnails/08.jpg",
+        "imageURL":  "/img/photos/08.jpg",
+        "thumbnailURL":  "/img/thumbnails/08.jpg",
         "caption": "My summer vacation to the Oregon Coast. I love the sandy dunes!"
-        }
+        },
         {
         "name": "Countryside Lane",
-        "image-url":  "/img/photos/09.jpg",
-        "thumbnail-url":  "/img/thumbnails/09.jpg",
+        "imageURL":  "/img/photos/09.jpg",
+        "thumbnailURL":  "/img/thumbnails/09.jpg",
         "caption": "We enjoyed a quiet stroll down this countryside lane."
-        }
+        },
         {
         "name": "Sunset",
-        "image-url":  "/img/photos/10.jpg",
-        "thumbnail-url":  "/img/thumbnails/10.jpg",
+        "imageURL":  "/img/photos/10.jpg",
+        "thumbnailURL":  "/img/thumbnails/10.jpg",
         "caption": "Sunset at the coast! The sky turned a lovely shade of orange."
-        }
+        },
         {
         "name": "Cave",
-        "image-url":  "/img/photos/11.jpg",
-        "thumbnail-url":  "/img/thumbnails/11.jpg",
+        "imageURL":  "/img/photos/11.jpg",
+        "thumbnailURL":  "/img/thumbnails/11.jpg",
         "caption": "I did a tour of a cave today and the view of the landscape below was breathtaking."
-        }
+        },
         {
         "name": "Bluebells",
-        "image-url":  "/img/photos/12.jpg",
-        "thumbnail-url":  "/img/thumbnails/12.jpg",
+        "imageURL":  "/img/photos/12.jpg",
+        "thumbnailURL":  "/img/thumbnails/12.jpg",
         "caption": "I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in."
         }
     }
+}
