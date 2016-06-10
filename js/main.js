@@ -1,24 +1,29 @@
 /* global photos, jQuery */
 
-(function(){
+(function($){
     'use strict';
     
-    function loadGallery(){
-        var gallery = document.getElementById("photo-gallery");
-        var output = '';
-        
-        for (var i = 0; i < photos.length; i++) {
-            output += "<figure class='photo'>";
-            output += "<a href=./img/photos/" + photos[i].name + ">";
-            output += "<img src=./img/thumbnails/" + photos[i].name + "></img>";
-            output += "</a>";
-            output += "</figure>";
-        }
-        
-        gallery.innerHTML = output;    
-        
+    var photo = document.getElementsByTagName("figure");
+    var body = document.getElementsByTagName("body");
+    
+    var $gallery = $("#photo-gallery");
+    var output = '';
+    
+    for (var i = 0; i < photos.length; i++) {
+        output += "<figure class='photo'>";
+        output += "<a href=./img/photos/" + photos[i].name + ">";
+        output += "<img src=./img/thumbnails/" + photos[i].name + "></img>";
+        output += "</a>";
+        output += "</figure>";
     }
     
-    loadGallery();
+    $gallery.append(output);
     
-})();
+    $(photo).on("click", function(e){
+        e.preventDefault();
+        $("#photo-gallery-container").addClass("overlay");
+    });
+    
+    
+    
+})(jQuery);
