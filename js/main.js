@@ -30,7 +30,7 @@
             lightboxPhoto += "<img src=" + $(this).find('a').attr("href") + "></img>";
             lightboxPhoto += "<figcaption>" + photos[0].caption + "</figcaption>";
             lightboxPhoto += "</figure>";
-        $("#lightbox").append(lightboxPhoto);
+        $("#lightbox").html(lightboxPhoto);
     });
     
     $("#lightbox-container").on("click", function(){
