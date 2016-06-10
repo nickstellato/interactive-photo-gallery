@@ -1,25 +1,24 @@
 /* global photos, jQuery */
 
-(function($){
+(function(){
+    'use strict';
     
-    var gallery = document.getElementById("photo-gallery");
-    var photo = document.getElementsByClassName(photo);
-    var output = '';
-    
-    for (var i = 0; i < photos.length; i++) {
-        output += "<figure class='photo'>";
-        output += "<a href=./img/photos/" + photos[i].name + ">";
-        output += "<img src=./img/thumbnails/" + photos[i].name + "></img>";
-        output += "</a>";
-        output += "</figure>";
+    function loadGallery(){
+        var gallery = document.getElementById("photo-gallery");
+        var output = '';
+        
+        for (var i = 0; i < photos.length; i++) {
+            output += "<figure class='photo'>";
+            output += "<a href=./img/photos/" + photos[i].name + ">";
+            output += "<img src=./img/thumbnails/" + photos[i].name + "></img>";
+            output += "</a>";
+            output += "</figure>";
+        }
+        
+        gallery.innerHTML = output;    
+        
     }
     
-    gallery.innerHTML = output;
+    loadGallery();
     
-    $("figure").click(function(event) {
-        event.preventDefault();
-
-    });
-    
-    
-})(jQuery);
+})();
