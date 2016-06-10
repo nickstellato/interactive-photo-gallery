@@ -24,11 +24,8 @@
         $("#photo-gallery-container").addClass("overlay");
     });
     
-    $("#photo-gallery-container").on("click", function(e){
-        e.preventDefault();
+    $("#photo-gallery-container").on("click", function(){
         $(this).removeClass("overlay");
     });
-    
-    
     
 })(jQuery);
