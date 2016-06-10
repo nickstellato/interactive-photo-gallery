@@ -16,15 +16,25 @@
     
     $gallery.append(output);
     
+    //Need to add the output that is added to the lightbox
+    //What do we need:
+        //Left Arrow that clicks to the previous picture
+        //Image
+        //Figure caption
+        //Right Arrow that moves forward when clicked
+    
     $("figure").on("click", function(e){
         e.preventDefault();
         $("#lightbox-container").addClass("overlay");
-        $("#lightbox").addClass("secondary-overlay");
+        var lightboxPhoto  = "<figure>";
+            lightboxPhoto += "<img src=" + $(this).find('a').attr("href") + "></img>";
+            lightboxPhoto += "<figcaption>" + photos[0].caption + "</figcaption>";
+            lightboxPhoto += "</figure>";
+        $("#lightbox").append(lightboxPhoto);
     });
     
     $("#lightbox-container").on("click", function(){
         $(this).removeClass("overlay");
-        $("#lightbox").removeClass("secondary-overlay");
     });
     
 })(jQuery);
