@@ -24,6 +24,11 @@
         $("#photo-gallery-container").addClass("overlay");
     });
     
+    $("#photo-gallery-container").on("click", function(e){
+        e.preventDefault();
+        $(this).removeClass("overlay");
+    });
+    
     
     
 })(jQuery);
