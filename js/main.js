@@ -21,13 +21,13 @@
     
     $(photo).on("click", function(e){
         e.preventDefault();
-        $("#photo-gallery-container").addClass("overlay");
-        $("#figure-container").addClass("secondary-overlay");
+        $("#lightbox-container").addClass("overlay");
+        $("#lightbox").addClass("secondary-overlay");
     });
     
-    $("#photo-gallery-container").on("click", function(){
+    $("#lightbox-container").on("click", function(){
         $(this).removeClass("overlay");
-        $("#figure-container").removeClass("secondary-overlay");
+        $("#lightbox").removeClass("secondary-overlay");
     });
     
 })(jQuery);
