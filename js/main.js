@@ -3,9 +3,6 @@
 (function($){
     'use strict';
     
-    var photo = document.getElementsByTagName("figure");
-    var body = document.getElementsByTagName("body");
-    
     var $gallery = $("#photo-gallery");
     var output = '';
     
@@ -19,7 +16,7 @@
     
     $gallery.append(output);
     
-    $(photo).on("click", function(e){
+    $("figure").on("click", function(e){
         e.preventDefault();
         $("#lightbox-container").addClass("overlay");
         $("#lightbox").addClass("secondary-overlay");
