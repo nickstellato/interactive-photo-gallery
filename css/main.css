@@ -56,7 +56,10 @@ body {
     margin: 0 auto;
     padding: 5%;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of 5fab47c... Installed font-awesome for icons
 .overlay img {
     width: 100%;
 }
@@ -68,6 +71,7 @@ body {
     text-align: left;
     width: 600px;
     margin: 5% 15%;
+<<<<<<< HEAD
 }
 
 .fa-angle-left,
@@ -83,3 +87,6 @@ body {
 .fa-angle-right {
   bottom: 25%; 
 }
+=======
+}
+>>>>>>> parent of 5fab47c... Installed font-awesome for icons
