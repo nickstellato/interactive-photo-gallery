@@ -69,3 +69,17 @@ body {
     width: 600px;
     margin: 5% 15%;
 }
+
+.fa-angle-left,
+.fa-angle-right {
+  position: relative;
+  color: white;
+}
+
+.fa-angle-left {
+  top: 25%;
+}
+
+.fa-angle-right {
+  bottom: 25%; 
+}
