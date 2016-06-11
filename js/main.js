@@ -35,7 +35,8 @@
     });
     
     $("#overlay").on("click", function(){
-       $("#lightboxPhoto").parent().remove();
+       $("#lightboxPhoto").remove();
+       $("#overlay").removeClass("overlay");
     });
     
 })(jQuery);
