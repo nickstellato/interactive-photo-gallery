@@ -49,3 +49,18 @@ body {
     z-index: 10;
     background: rgba(0,0,0,0.8);
 }
+
+.overlay figure {
+    width: 60%;
+    margin: 0 auto;
+    padding: 5%;
+}
+.overlay img {
+    width: 100%;
+}
+
+.overlay figcaption {
+    color: white;
+    text-align: center;
+    margin-top: 5%;
+}
