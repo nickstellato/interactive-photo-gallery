@@ -60,7 +60,10 @@ body {
 }
 
 .overlay figcaption {
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 1em;
     color: white;
-    text-align: center;
-    margin-top: 5%;
+    text-align: left;
+    width: 600px;
+    margin: 5% 15%;
 }
