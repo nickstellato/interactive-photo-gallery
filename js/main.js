@@ -16,10 +16,14 @@
     
     $gallery.append(output);
     
-    var lightboxPhoto  = "<figure id='lightboxPhoto'>";
+    var lightboxPhoto  = "<div id='lightbox-container>"
+        lightboxPhoto += "<a href=''>&lsaquo;</a>";
+        lightboxPhoto += "<figure id='lightboxPhoto'>";
         lightboxPhoto += "<img src='./img/photos/01.jpg'></img>";
         lightboxPhoto += "<figcaption>Hello World</figcaption>";
         lightboxPhoto += "</figure>";
+        lightboxPhoto += "<a href=''>&rsaquo;</a>";
+        lightboxPhoto += "</div>"
     
     $("figure").on("click", function(e){
         e.preventDefault();
@@ -35,7 +39,7 @@
     });
     
     $("#overlay").on("click", function(){
-       $("#lightboxPhoto").remove();
+       $("#lightboxPhoto").parent().remove();
        $("#overlay").removeClass("overlay");
     });
     
