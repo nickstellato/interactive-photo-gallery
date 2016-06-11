@@ -23,12 +23,19 @@
     
     $("figure").on("click", function(e){
         e.preventDefault();
-        $("#overlay").addClass("overlay");
-        $("#overlay").prepend(lightboxPhoto);
+        
+        if ($("#overlay").length){
+            $("#overlay").addClass("overlay");
+            $("#overlay").prepend(lightboxPhoto);
+        } else {
+            $(".container").prepend("<div id='overlay'></div>");
+            $("#overlay").addClass("overlay");
+            $("#overlay").prepend(lightboxPhoto);
+        }
     });
     
     $("#overlay").on("click", function(){
-       $("#lightboxPhoto").parent().remove(); 
+       $("#lightboxPhoto").parent().remove();
     });
     
 })(jQuery);
