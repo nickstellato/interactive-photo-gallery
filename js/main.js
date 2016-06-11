@@ -16,16 +16,19 @@
     
     $gallery.append(output);
     
-    var lightboxPhoto  = "<div id='overlay' class='overlay'>"
-        lightboxPhoto += "<figure id='lightboxPhoto'>";
+    var lightboxPhoto  = "<figure id='lightboxPhoto'>";
         lightboxPhoto += "<img src='./img/photos/01.jpg'></img>";
         lightboxPhoto += "<figcaption>Hello World</figcaption>";
         lightboxPhoto += "</figure>";
-        lightboxPhoto += "</div>"
     
     $("figure").on("click", function(e){
         e.preventDefault();
-        $(".container").prepend(lightboxPhoto);
+        $("#overlay").addClass("overlay");
+        $("#overlay").prepend(lightboxPhoto);
+    });
+    
+    $("#overlay").on("click", function(){
+       $("#lightboxPhoto").parent().remove(); 
     });
     
 })(jQuery);
