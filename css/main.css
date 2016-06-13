@@ -66,6 +66,7 @@ body {
     font-size: 1em;
     color: white;
     text-align: left;
-    width: 600px;
-    margin: 5% 15%;
+    max-width: 600px;
+    margin: 1.5em auto;
+    line-height: 1.5em;
 }
