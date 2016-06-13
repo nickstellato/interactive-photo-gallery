@@ -34,18 +34,17 @@
 
       $("#overlay").addClass("overlay");
 
-      var photoURL = ($(this).children('a')).attr("href");
       var index = $("figure").index(this);
       
       console.log(index);
 
       var lightboxPhoto  = "<div id='lightbox-container'>"
-          lightboxPhoto += "<a href=''>&lsaquo;</a>";
+          lightboxPhoto += "<a id='left-arrow' href= ''>&lsaquo;</a>";
           lightboxPhoto += "<figure id='lightboxPhoto'>";
-          lightboxPhoto += "<img src=" + photoURL + "></img>";
+          lightboxPhoto += "<img src= ./img/photos/" + photos[index].name + "></img>";
           lightboxPhoto += "<figcaption>" + photos[index].caption + "</figcaption>";
           lightboxPhoto += "</figure>";
-          lightboxPhoto += "<a href=''>&rsaquo;</a>";
+          lightboxPhoto += "<a id='right-arrow' href=''>&rsaquo;</a>";
           lightboxPhoto += "</div>"
 
       $("#overlay").prepend(lightboxPhoto);
