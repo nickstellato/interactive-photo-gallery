@@ -7,7 +7,7 @@
     var output = '';
 
     for (var i = 0; i < photos.length; i++) {
-      output += "<figure class='photo'>";
+      output += "<figure class='photo' id='photo-'" + i + ">";
       output += "<a href=./img/photos/" + photos[i].name + ">";
       output += "<img src=./img/thumbnails/" + photos[i].name + "></img>";
       output += "</a>";
