@@ -26,16 +26,14 @@
       $("#overlay").addClass("overlay");
 
       var index = $("figure").index(this);
-      
-      console.log(index);
 
       var lightboxPhoto  = "<div id='lightbox-container'>"
-          lightboxPhoto += "<a id='left-arrow' href= ''>&lsaquo;</a>";
+          lightboxPhoto += "<span id='left-arrow'>&lsaquo;</span>";
           lightboxPhoto += "<figure id='lightboxPhoto'>";
           lightboxPhoto += "<img src= ./img/photos/" + photos[index].name + "></img>";
           lightboxPhoto += "<figcaption>" + photos[index].caption + "</figcaption>";
           lightboxPhoto += "</figure>";
-          lightboxPhoto += "<a id='right-arrow' href=''>&rsaquo;</a>";
+          lightboxPhoto += "<span id='right-arrow'>&rsaquo;</span>";
           lightboxPhoto += "</div>"
 
       $("#overlay").prepend(lightboxPhoto);
