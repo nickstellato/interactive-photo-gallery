@@ -42,6 +42,9 @@
     $("#lightbox-container span").on("click", function(e){
         e.preventDefault();
         
+        var lightboxPhotoIndex = $("figure").index("img");
+        console.log(lightboxPhotoIndex);
+        
         if (this.id === 'left-arrow') {
           //back arrow functionality
         } else {

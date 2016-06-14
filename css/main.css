@@ -51,13 +51,19 @@ body {
     background: rgba(0,0,0,0.8);
 }
 
-.overlay figure {
-    width: 60%;
-    margin-top: 150px;
+#lightbox-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    width: 80%;
+    margin: 5% auto 0;
 }
 
-.overlay img {
-    width: 100%;
+#lightbox-container span {
+    cursor: pointer;
+    font-size: 6em;
+    color: white;
 }
 
 #left-arrow {
@@ -68,7 +74,12 @@ body {
     margin-left: .5em;
 }
 
-.overlay figcaption {
+#lightbox-container img {
+    width: 100%;
+    padding-top: 12.5%;
+}
+
+#lightbox-container figcaption {
     font-family: 'Ubuntu Mono', monospace;
     font-size: 1.1em;
     color: white;
@@ -76,16 +87,4 @@ body {
     max-width: 600px;
     margin: 1.5em auto;
     line-height: 1.5em;
-}
-
-#lightbox-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#lightbox-container span {
-    cursor: pointer;
-    font-size: 8em;
-    color: white;
 }
