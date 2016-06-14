@@ -38,6 +38,16 @@
 
       $("#overlay").prepend(lightboxPhoto);
     });
+    
+    $("#lightbox-container span").on("click", function(e){
+        e.preventDefault();
+        
+        if (this.id === 'left-arrow') {
+          //back arrow functionality
+        } else {
+          //forward arrow functionality
+        }
+    });
 
     $("#overlay").on("click", function(){
        $("#lightboxPhoto").parent().remove();

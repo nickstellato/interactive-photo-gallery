@@ -53,20 +53,39 @@ body {
 
 .overlay figure {
     width: 60%;
-    margin: 0 auto;
-    padding: 5%;
+    margin-top: 150px;
 }
 
 .overlay img {
     width: 100%;
 }
 
+#left-arrow {
+    margin-right: .5em;
+}
+
+#right-arrow {
+    margin-left: .5em;
+}
+
 .overlay figcaption {
     font-family: 'Ubuntu Mono', monospace;
-    font-size: 1.3em;
+    font-size: 1.1em;
     color: white;
     text-align: left;
     max-width: 600px;
     margin: 1.5em auto;
     line-height: 1.5em;
+}
+
+#lightbox-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#lightbox-container span {
+    cursor: pointer;
+    font-size: 8em;
+    color: white;
 }
