@@ -4,10 +4,10 @@
 
     //when you click on a photo, the photo adds the overlay class to the body
 
-    for each (photo in $photos) {
-        photo.addEventListener('click', function(){
+    for (var i = 0; i < $photos.length(); i++){
+        $photos[i].addEventListener("click", function(){
             $body.className += "overlay";
         })
-    }
 
+    }
 })();
