@@ -1,8 +1,14 @@
 (function(){
     var $photos = document.querySelectorAll("img");
-    console.log($photos);
+    var $lightbox = document.getElementById("lightbox");
 
-    for (var photo of $photos) {
-        console.log(photo);
-    }
+    $photos.forEach(function(photo){
+        photo.addEventListener("click", function(){
+            $lightbox.className = "lightbox";
+        });
+    });
+
+    $lightbox.addEventListener("click", function(){
+        $lightbox.removeAttribute("class");
+    });
 })();
