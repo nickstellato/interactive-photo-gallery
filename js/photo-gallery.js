@@ -1,5 +1,5 @@
 (function(){
-    var $photos = document.querySelectorAll("img");
+    var $photos = getPhotosArray();
     var $lightbox = document.getElementById("lightbox");
 
     $photos.forEach(function(photo){
@@ -42,14 +42,19 @@
         $lightbox.appendChild($figure);
     }
 
-    function getPreviousPhoto(){
-        $currentPhoto = this.getAttribute("src");
+    function getPhotosArray(){
+        $photosList = document.querySelectorAll("img");
+        return Array.prototype.slice.call($photosList);
+    }
 
+    function getPreviousPhoto(){
+        var $previousPhoto = this.previousSibling;
+        console.log($previousPhoto);
     }
 
     function getNextPhoto(){
-        $currentPhoto = this.getAttribute("src");
-
+        var $nextPhoto = this.nextSibling;
+        console.log($nextPhoto);
     }
 
     function removeLightbox(){
