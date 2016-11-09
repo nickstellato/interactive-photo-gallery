@@ -50,6 +50,7 @@
 figure {
     max-width: 980px;
     margin: auto;
+    z-index: 1000;
 
 }
 
@@ -64,6 +65,18 @@ figure {
 }
 
 .arrow {
+    position: absolute;
+    top: 40%;
     color: white;
     font-size:5em;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.arrow-left {
+    left: 15%;
+}
+
+.arrow-right {
+    right: 15%;
 }

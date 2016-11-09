@@ -9,27 +9,31 @@
     $lightbox.addEventListener("click", removeLightbox, false);
 
     function illuminate(){
-        $lightbox.className = "lightbox";
+        $lightbox.setAttribute("class", "lightbox");
 
         $photoURL = this.getAttribute("src").replace("/thumbnails", "");
         $img = document.createElement("img");
         $img.setAttribute("src", $photoURL);
-        $img.className = "largePhoto";
+        $img.setAttribute("class", "largePhoto");
 
         $caption = this.getAttribute("alt");        
         $figcaption = document.createElement("figcaption");
         $figcaption.innerText = $caption;
-        $figcaption.className = "caption";
+        $figcaption.setAttribute("class", "caption");
 
         $figure = document.createElement("figure");
 
         $leftArrow = document.createElement("a");
-        $rightArrow = document.createElement("a");
-        $leftArrow.className = "arrow arrow-left";
-        $rightArrow.className = "arrow arrow-right";
-
+        $leftArrow.setAttribute("class", "arrow arrow-left");
+        $leftArrow.setAttribute("id", "previous");
         $leftArrow.innerHTML = '&#10094;';
+        $leftArrow.addEventListener("click", "", false);
+
+        $rightArrow = document.createElement("a");
+        $rightArrow.setAttribute("class", "arrow arrow-right");
+        $rightArrow.setAttribute("id", "next");        
         $rightArrow.innerHTML = '&#10095;';
+        $rightArrow.addEventListener("click", "", false);
 
         $figure.appendChild($leftArrow);
         $figure.appendChild($img);
