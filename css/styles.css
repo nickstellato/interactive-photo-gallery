@@ -40,24 +40,23 @@
     width: 100%;
     background-color: rgba(0, 0, 0, .8);
     z-index: 100;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 figure {
-    display flex;
     max-width: 980px;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
+    margin: auto;
 
 }
 
 .largePhoto {
     width: 800px;
-    margin: 0 auto;
 }
 
 .caption {
     color: white;
     max-width: 600px;
-    margin: auto;
 }
