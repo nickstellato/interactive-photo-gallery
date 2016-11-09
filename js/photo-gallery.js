@@ -22,12 +22,18 @@
         $figcaption.className = "caption";
 
         $figure = document.createElement("figure");
-        
-        //add arrows to the figure
 
-        //append arrows to the figure
+        $leftArrow = document.createElement("a");
+        $rightArrow = document.createElement("a");
+        $leftArrow.className = "arrow arrow-left";
+        $rightArrow.className = "arrow arrow-right";
 
+        $leftArrow.innerHTML = '&#10094;';
+        $rightArrow.innerHTML = '&#10095;';
+
+        $figure.appendChild($leftArrow);
         $figure.appendChild($img);
+        $figure.appendChild($rightArrow);
         $figure.appendChild($figcaption);
         $lightbox.appendChild($figure);
     }

@@ -60,4 +60,10 @@ figure {
 .caption {
     color: white;
     max-width: 600px;
+    margin: 0 auto;
+}
+
+.arrow {
+    color: white;
+    font-size:5em;
 }
