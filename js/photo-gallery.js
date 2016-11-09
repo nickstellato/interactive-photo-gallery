@@ -18,7 +18,7 @@
 
         $caption = this.getAttribute("alt");        
         $figcaption = document.createElement("figcaption");
-        $figcaption.innerHTML = $caption;
+        $figcaption.innerText = $caption;
         $figcaption.className = "caption";
 
         $figure = document.createElement("figure");
