@@ -11,15 +11,18 @@
     function illuminate(){
         $lightbox.className = "lightbox";
 
-        $thumbnailURL = this.getAttribute("src");
-        $caption = this.getAttribute("alt");
-        
-        $figure = document.createElement("figure");
-        $figcaption = document.createElement("figcaption");
-
+        $photoURL = this.getAttribute("src").replace("/thumbnails", "");
         $img = document.createElement("img");
-        //add the src to the image
+        $img.setAttribute("src", $photoURL);
+        $img.className = "largePhoto";
 
+        $caption = this.getAttribute("alt");        
+        $figcaption = document.createElement("figcaption");
+        $figcaption.innerHTML = $caption;
+        $figcaption.className = "caption";
+
+        $figure = document.createElement("figure");
+        
         //add arrows to the figure
 
         //append arrows to the figure

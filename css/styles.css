@@ -39,6 +39,25 @@
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, .8);
-    position: absolute;
     z-index: 100;
+}
+
+figure {
+    display flex;
+    max-width: 980px;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+
+}
+
+.largePhoto {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.caption {
+    color: white;
+    max-width: 600px;
+    margin: auto;
 }
