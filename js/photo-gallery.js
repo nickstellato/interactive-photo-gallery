@@ -10,14 +10,18 @@
 
     function illuminate(){
         $lightbox.className = "lightbox";
+
         $thumbnailURL = this.getAttribute("src");
+        $caption = this.getAttribute("alt");
+        
         $figure = document.createElement("figure");
         $figcaption = document.createElement("figcaption");
+
         $img = document.createElement("img");
         //add the src to the image
 
         //add arrows to the figure
-        
+
         //append arrows to the figure
 
         $figure.appendChild($img);
