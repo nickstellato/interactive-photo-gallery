@@ -27,19 +27,29 @@
         $leftArrow.setAttribute("class", "arrow arrow-left");
         $leftArrow.setAttribute("id", "previous");
         $leftArrow.innerHTML = '&#10094;';
-        $leftArrow.addEventListener("click", "", false);
+        $leftArrow.addEventListener("click", getPreviousPhoto, false);
 
         $rightArrow = document.createElement("a");
         $rightArrow.setAttribute("class", "arrow arrow-right");
         $rightArrow.setAttribute("id", "next");        
         $rightArrow.innerHTML = '&#10095;';
-        $rightArrow.addEventListener("click", "", false);
+        $rightArrow.addEventListener("click", getNextPhoto, false);
 
         $figure.appendChild($leftArrow);
         $figure.appendChild($img);
         $figure.appendChild($rightArrow);
         $figure.appendChild($figcaption);
         $lightbox.appendChild($figure);
+    }
+
+    function getPreviousPhoto(){
+        $currentPhoto = this.getAttribute("src");
+
+    }
+
+    function getNextPhoto(){
+        $currentPhoto = this.getAttribute("src");
+
     }
 
     function removeLightbox(){
