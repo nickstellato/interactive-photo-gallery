@@ -16,6 +16,7 @@
         $img.setAttribute("src", $photoURL);
         $img.setAttribute("class", "largePhoto");
         $img.setAttribute("id", "currentPhoto");
+        // var $currentPhotoIndex = $photos.indexOf(this);
 
         var $caption = this.getAttribute("alt");        
         var $figcaption = document.createElement("figcaption");
@@ -34,23 +35,13 @@
         $rightArrow.setAttribute("class", "arrow arrow-right");
         $rightArrow.setAttribute("id", "next");        
         $rightArrow.innerHTML = '&#10095;';
-        $rightArrow.addEventListener("click", getNextPhoto, false);
+        $rightArrow.addEventListener("click", function(){}, false);
 
         $figure.appendChild($leftArrow);
         $figure.appendChild($img);
         $figure.appendChild($rightArrow);
         $figure.appendChild($figcaption);
-        $lightbox.appendChild($figure);
-    }
-
-    function getNextPhoto(){
-        var currentPhotoIndex = $photos.indexOf(this);
-        var nextPhotoIndex = currentPhotoIndex + 1;
-        var nextPhotoSRC = $photos[nextPhotoIndex].getAttribute("src");
-        var nextPhotoALT = $photos[nextPhotoIndex].getAttribute("alt");
-        var currentPhoto = document.getElementById("currentPhoto");
-        currentPhoto.setAttribute("src", nextPhotoSRC);
-        currentPhoto.setAttribute("alt", nextPhotoALT);
+        $lightbox.appendChild($figure);       
     }
 
     function getPhotosArray(){
