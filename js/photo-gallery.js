@@ -2,6 +2,7 @@
     "use strict";
 
     var $photos = getPhotosArray();
+    console.log($photos);
     var $lightbox = document.getElementById("lightbox");
 
     $photos.forEach(function(photo){
@@ -10,13 +11,13 @@
 
     function illuminate(){
         $lightbox.setAttribute("class", "lightbox");
+        var _this = this;
 
         var $photoURL = this.getAttribute("src").replace("/thumbnails", "");
         var $img = document.createElement("img");
         $img.setAttribute("src", $photoURL);
         $img.setAttribute("class", "largePhoto");
         $img.setAttribute("id", "currentPhoto");
-        // var $currentPhotoIndex = $photos.indexOf(this);
 
         var $caption = this.getAttribute("alt");        
         var $figcaption = document.createElement("figcaption");
@@ -35,13 +36,44 @@
         $rightArrow.setAttribute("class", "arrow arrow-right");
         $rightArrow.setAttribute("id", "next");        
         $rightArrow.innerHTML = '&#10095;';
-        $rightArrow.addEventListener("click", function(){}, false);
+        $rightArrow.addEventListener("click", function(){
+            var currentPhotoIndex = $photos.indexOf(_this);
+            var nextPhotoIndex = currentPhotoIndex + 1;
+            var nextPhoto = $photos[nextPhotoIndex];
+            console.log(nextPhoto);
+            $caption = nextPhoto.getAttribute("alt");
+            $img = nextPhoto.getAttribute("src");
+        }, false);
 
         $figure.appendChild($leftArrow);
         $figure.appendChild($img);
-        $figure.appendChild($rightArrow);
         $figure.appendChild($figcaption);
-        $lightbox.appendChild($figure);       
+        $figure.appendChild($rightArrow);
+        $lightbox.appendChild($figure);
+
+        // var currentPhotoIndex = $photos.indexOf(this);
+        // console.log(currentPhotoIndex);
+        // var nextPhotoIndex = incrementIndex(currentPhotoIndex);
+        // console.log(nextPhotoIndex);
+        // var prevPhotoIndex = decrementIndex(currentPhotoIndex);
+
+        // function setNextPhoto(index) {
+        //     var nextPhoto = $photos[index];
+        //     console.log(nextPhoto);
+        //     var nextPhotoSRC = nextPhoto.values("src");
+        //     var nextPhotoALT = nextPhoto.values("alt");
+        //     $img.setAttribute("src", nextPhotoSRC);
+        //     $img.setAttribute("alt", nextPhotALT);
+        // }
+
+        // function incrementIndex(index) {
+        //     return index + 1;
+
+        // }
+
+        // function decrementIndex(index) {
+        //     return index - 1;
+        // }
     }
 
     function getPhotosArray(){
