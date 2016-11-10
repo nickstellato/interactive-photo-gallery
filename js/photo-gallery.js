@@ -13,11 +13,11 @@
         $lightbox.setAttribute("class", "lightbox");
         var _this = this;
 
-        var $photoURL = this.getAttribute("src").replace("/thumbnails", "");
-        var $img = document.createElement("img");
-        $img.setAttribute("src", $photoURL);
-        $img.setAttribute("class", "largePhoto");
-        $img.setAttribute("id", "currentPhoto");
+        var $img = makeImage(_this);
+
+        
+
+        
 
         var $caption = this.getAttribute("alt");        
         var $figcaption = document.createElement("figcaption");
@@ -74,6 +74,16 @@
         // function decrementIndex(index) {
         //     return index - 1;
         // }
+    }
+
+    function makeImage(el){
+        var $photoURL = el.getAttribute("src")
+            .replace("/thumbnails", "");
+        var $img = document.createElement("img");
+        $img.setAttribute("src", $photoURL);
+        $img.setAttribute("class", "largePhoto");
+        $img.setAttribute("id", "currentPhoto");
+        return $img;
     }
 
     function getPhotosArray(){
