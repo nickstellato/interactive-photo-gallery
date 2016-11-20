@@ -7,11 +7,18 @@
     <link rel="stylesheet" type="text/css" href="./css/styles.css">
 </head>
 <body>
-    <div id="lightbox"></div>
+    <div id="lightbox">
+        <a href="#" id="previous" class="arrow arrow-left hidden">&#10094;</a>
+        <figure>
+            <img src="" alt="" id="currentPhoto" class="largePhoto">
+            <figcaption id="currentCaption" class="caption"></figcaption>
+        </figure>
+        <a href="#" id="next" class="arrow arrow-right hidden">&#10095;</a>
+    </div>  <!-- end #lightbox -->
 
     <div class="wrapper">
  
-        <input type="search" placeholder="Search" class="search">
+        <input type="search" placeholder="Search" class="search" id="searchBox">
    
         <div class="photo-gallery">
 
@@ -44,6 +51,7 @@
     </div> <!-- end .wrapper -->
     
     <script type="text/javascript" src="./js/photo-gallery.js"></script>
+    <script type="text/javascript" src="./js/search.js"></script>
 
 </body>
 

@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
 .wrapper {
     width: 100%;
     position: fixed;
@@ -77,4 +81,8 @@ figure {
 
 .arrow-right {
     right: 15%;
+}
+
+.hidden {
+    display: none;
 }
