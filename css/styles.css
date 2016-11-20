@@ -44,6 +44,7 @@
     justify-content: center;
     flex-direction: column;
     position: absolute;
+    z-index: 1;
 }
 
 figure {
@@ -67,6 +68,7 @@ figure {
     color: white;
     font-size:5em;
     cursor: pointer;
+    z-index: 2;
 }
 
 .arrow-left {

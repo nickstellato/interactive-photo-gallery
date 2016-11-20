@@ -1,100 +1,95 @@
-"use strict";
-
-var photos = makeArray("img")
-
-photos.forEach(function(photo){
-    photo.addEventListener("click", illuminate, false);
-});
-
-function illuminate(){
-    var lightbox = document.getElementById("lightbox");
-    lightbox.setAttribute("class", "lightbox");
-
-    var index = photos.indexOf(this);
-
-    var img = makeImage(index);
+(function(){
     
-    var figcaption = makeFigCaption(index);
+    "use strict";
 
-    var leftArrow = makeArrow(index, "left", figcaption, img);
+    var photos = makeArray("photo")
 
-    var rightArrow = makeArrow(index, "right", figcaption, img);
+    photos.forEach(function(photo){
+        photo.onclick = illuminate;
+    });
 
-    var figure = makeFigure(img, figcaption, leftArrow, rightArrow);
-
-    lightbox.appendChild(figure);
-}
-
-function makeImage(index){
-    var img = document.createElement("img");
-    img.setAttribute("class", "largePhoto");
-    img.setAttribute("id", "currentPhoto");
-    var photoURL = photos[index].src.replace("/thumbnails", "");
-    img.setAttribute("src", photoURL);
-    return img;
-}
-
-function makeFigCaption(index){
-    var caption = photos[index].alt;        
-    var figcaption = document.createElement("figcaption");
-    figcaption.innerText = caption;
-    figcaption.setAttribute("class", "caption");
-    return figcaption;
-}
-
-function makeArrow(index, direction, caption, img){
-    var arrow = document.createElement("a");
-    if (direction === "left"){
-        arrow.setAttribute("id", "previous");
-        arrow.setAttribute("class", "arrow arrow-left");
-        arrow.innerHTML = '&#10094;';
-        arrow.addEventListener("click", photoScroll(index, "previous", caption, img), 
-            false);
-    } else if (direction === "right"){
-        arrow.setAttribute("id", "next");
-        arrow.setAttribute("class", "arrow arrow-right");
-        arrow.innerHTML = '&#10095;'
-        arrow.addEventListener("click", photoScroll(index, "next", caption, img),
-            false);
-    } else {
-        return Error;
+    function illuminate(){
+        var index = photos.indexOf(this);
+        var lightbox = document.getElementById("lightbox");
+            lightbox.setAttribute("class", "lightbox");
+            lightbox.appendChild(makeLeftArrow(index));
+            lightbox.appendChild(makeFigure(makeImage(index),
+                makeFigCaption(index)));
+            lightbox.appendChild(makeRightArrow(index));
     }
 
-    return arrow
-}
+    function makeImage(index){
+        var photoURL = photos[index].src.replace("/thumbnails", "");
+        var img = document.createElement("img");
+            img.setAttribute("class", "largePhoto");
+            img.setAttribute("id", "currentPhoto");
+            img.setAttribute("src", photoURL);
+        return img;
+    }
 
-function makeFigure(img, figcaption, leftArrow, rightArrow) {
-    var figure = document.createElement("figure");
-    figure.appendChild(leftArrow);
-    figure.appendChild(img);
-    figure.appendChild(figcaption);
-    figure.appendChild(rightArrow);
-    return figure;
-}
+    function makeFigCaption(index){ 
+        var figcaption = document.createElement("figcaption");
+            figcaption.innerText = photos[index].alt;
+            figcaption.setAttribute("class", "caption");
+            figcaption.setAttribute("id", "currentCaption");
+        return figcaption;
+    }
 
-function photoScroll(index, direction, caption, img) {
+    function makeLeftArrow(index){
+        var arrow = document.createElement("a");
+            arrow.setAttribute("id", "previous");
+            arrow.setAttribute("class", "arrow arrow-left");
+            arrow.innerHTML = '&#10094;'
+        return arrow
+    }
 
-    if(direction === "next") {
-        if((index + 1) > 11) {
+    function makeRightArrow(index){
+        var arrow = document.createElement("a");
+            arrow.setAttribute("id", "next");
+            arrow.setAttribute("class", "arrow arrow-right");
+            arrow.innerHTML = '&#10095;'
+        return arrow;
+    }       
+
+    function makeFigure(img, figcaption) {
+        var figure = document.createElement("figure");
+            figure.appendChild(img);
+            figure.appendChild(figcaption);
+        return figure;
+    }
+
+    function nextPhoto(index){
+        if (index === 11) {
             index = 0;
         } else {
             index = index + 1;
         }
-    } else if (direction === "previous"){
-        if((index - 1) < 0) {
+
+        var caption = document.getElementById("currentCaption");
+            caption.setAttribute("alt", photos[index].alt);
+        var img = document.getElementById("currentPhoto");
+            img.setAttribute("src", photos[index].src
+                .replace("/thumbnails", ""));
+    }
+
+    function prevPhoto(index){
+        if (index === 0) {
             index = 11;
         } else {
             index = index - 1;
         }
-    } else {
-        return Error;
+
+        var caption = document.getElementById("currentCaption");
+            caption.setAttribute("alt", photos[index].alt);
+        var img = document.getElementById("currentPhoto");
+            img.setAttribute("src", photos[index].src
+                .replace("/thumbnails", ""));
     }
 
-    caption.innerText = photos[index].alt;
-    img.setAttribute("src", photos[index].src.replace("/thumbnails", ""));
-}
+    function makeArray(className){
+        return Array.prototype.slice.call(
+            document.getElementsByClassName(className));
+    }
 
+})();
 
-function makeArray(tag){
-    return Array.prototype.slice.call(document.querySelectorAll(tag));
-}
