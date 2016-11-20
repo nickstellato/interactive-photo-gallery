@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Interactive Photo Gallery</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="./css/normalize.css">
     <link rel="stylesheet" type="text/css" href="./css/styles.css">
@@ -9,8 +10,8 @@
 <body>
     <div id="lightbox">
         <a href="#" id="previous" class="arrow arrow-left hidden">&#10094;</a>
-        <figure>
-            <img src="" alt="" id="currentPhoto" class="largePhoto">
+        <figure id="figure" class="hidden">
+            <img src="#" alt="#" id="currentPhoto" class="largePhoto">
             <figcaption id="currentCaption" class="caption"></figcaption>
         </figure>
         <a href="#" id="next" class="arrow arrow-right hidden">&#10095;</a>
@@ -28,7 +29,7 @@
 
             <img src="photos/thumbnails/03.jpg" alt="I hiked to the top of the mountain and got this picture of the canyon and trees below." class="photo">
 
-            <img src="photos/thumbnails/04.jpg" alt="It was amazing to see an iceberg up close, it was so cold but didn&#39t snow today. " class="photo">
+            <img src="photos/thumbnails/04.jpg" alt="It was amazing to see an iceberg up close, it was so cold but didn&#39;t snow today. " class="photo">
 
             <img src="photos/thumbnails/05.jpg" alt="The red cliffs were beautiful. It was really hot in the desert but we did a lot of walking through the canyons." class="photo">
 

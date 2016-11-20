@@ -13,10 +13,12 @@
     function illuminate(){
         var index = photos.indexOf(this);
         var lightbox = document.getElementById("lightbox");
+        var figure = document.getElementById("figure");
         var rightArrow = document.getElementById("next");
         var leftArrow = document.getElementById("previous");
         var currentPhoto = document.getElementById("currentPhoto");
         var currentCaption = document.getElementById("currentCaption");
+            figure.setAttribute("class", "");
             lightbox.setAttribute("class", "lightbox");
             rightArrow.setAttribute("class", "arrow arrow-right");
             leftArrow.setAttribute("class", "arrow arrow-left");
