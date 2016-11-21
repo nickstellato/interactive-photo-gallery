@@ -2,9 +2,7 @@
     
     "use strict";
 
-    var photos = makeArray("photo")
-    console.log(photos[0]);
-    console.log(photos[0].alt);
+    var photos = makeArray("photo");
 
     photos.forEach(function(photo){
         photo.onclick = illuminate;
