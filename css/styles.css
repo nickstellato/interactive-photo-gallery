@@ -52,6 +52,20 @@ a {
     z-index: 1;
 }
 
+.close {
+    font-family: sans-serif;
+    font-size: 2em;
+    display: block;
+    color: white;
+    position: absolute;
+    top: 1px;
+    right: 200px;
+    height: 20px;
+    width: 20px;
+    font-weigth: 100;
+    cursor: pointer;
+}
+
 figure {
     max-width: 980px;
     margin: auto;
