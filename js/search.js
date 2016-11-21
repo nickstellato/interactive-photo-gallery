@@ -5,7 +5,7 @@
 
     var searchBox = document.getElementById("searchBox");
 
-    searchBox.addEventListener("keydown", function(){
+    searchBox.addEventListener("keyup", function(){
         for (var i = 0; i < photos.length; i++){
             if (photos[i].alt.search(searchBox.value) === -1) {
                 photos[i].setAttribute("class", "hidden");
