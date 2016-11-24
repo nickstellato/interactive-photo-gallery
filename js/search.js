@@ -9,6 +9,8 @@
         for (var i = 0; i < photos.length; i++){
             if (photos[i].alt.search(searchBox.value) === -1) {
                 photos[i].setAttribute("class", "hidden");
+            } else {
+                photos[i].setAttribute("class","photo");
             }
         }
     });
